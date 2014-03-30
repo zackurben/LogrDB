@@ -64,7 +64,8 @@ class LogrDB {
 		} elseif($create === true) {			
 			if(is_file($file)) {
 				throw new Exception('A file already exists with the name, ' . $file . 
-					', but the $create flag was set to true. Please specify a new name or turn the $create flag to false.');
+					', but the $create flag was set to true. Please specify' . 
+					' a new name or turn the $create flag to false.');
 			} else {
 				file_put_contents($file, '');
 				$this->db = $file;
